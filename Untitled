@@ -1,0 +1,32 @@
+{
+        "pageContent": "NOTE\nThe theme name should be a simple ASCII name. Whitespace and special characters are stripped and the name will be lowercase.",
+        "metadata": {
+          "source": "uploads\\1745564549168-313759743-frontend-en.pdf",
+          "pdf": {
+            "version": "1.10.100",
+            "info": {
+              "PDFFormatVersion": "1.5",
+              "IsAcroFormPresent": false,
+              "IsXFAPresent": false,
+              "Title": "Frontend Developer Manual",
+              "Author": "Unknown",
+              "Creator": "DocBook XSL Stylesheets V1.79.1",
+              "Producer": "XEP 4.4 build 20050610",
+              "CreationDate": "D:20210609194956",
+              "ModDate": "D:20210609194956"
+            },
+            "metadata": null,
+            "totalPages": 229
+          },
+          "loc": {
+            "pageNumber": 73,
+            "lines": {
+              "from": 1,
+              "to": 6
+            }
+          }
+        }
+      }
+    ]
+  }
+  
