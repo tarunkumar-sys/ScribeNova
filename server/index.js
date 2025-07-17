@@ -37,10 +37,10 @@ const app = express();
 // this will allow us to use json data in our requests
 app.use(cors());
 
-// checking if the server is running
-app.get("/", (req, res) => {
-  return res.json({ status: "Hello World!" });
-});
+// // checking if the server is running
+// app.get("/", (req, res) => {
+//   return res.json({ status: "Hello World!" });
+// });
 
 app.post("/upload/pdf", upload.single("pdf"), async (req, res) => {
   await queue.add(
