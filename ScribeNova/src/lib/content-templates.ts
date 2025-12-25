@@ -1,154 +1,208 @@
-// import {
-//   FaYoutube,
-//   FaInstagram,
-//   FaTiktok,
-//   FaLinkedin,
-//   FaTwitter,
-// } from "react-icons/fa";
-
-// export const contentTemplates = [
-//   {
-//     name: "Youtube Video Description",
-//     desc: "An AI tool that generate youtube video description from your information",
-//     category: "Youtube",
-//     icon: FaYoutube,
-//     aiPrompt:
-//       "Give me youtube video description Ideas based on given video description outline and title and give me result in Rich Text Editor format",
-//     slug: "youtube-description",
-//     form: [
-//       {
-//         label: "Youtube Video Description Title",
-//         field: "input",
-//         name: "niche",
-//         required: true,
-//       },
-//       {
-//         label: "Enter Video Description Outline",
-//         field: "textarea",
-//         name: "outline",
-//       },
-//     ],
-//   },
-//   {
-//     name: "Youtube Video Idea",
-//     desc: "An AI tool that generate Youtube Video Idea based on given information",
-//     category: "Youtube",
-//     icon: FaYoutube,
-//     aiPrompt:
-//       "Give me youtube video idea on given video niche & outline topic and give me result in Rich Text Editor format",
-//     slug: "generate-youtube-video-idea",
-//     form: [
-//       {
-//         label: "Enter your video niche",
-//         field: "input",
-//         name: "niche",
-//         required: true,
-//       },
-//       {
-//         label: "Enter video outline",
-//         field: "textarea",
-//         name: "outline",
-//       },
-//     ],
-//   },
-//   {
-//     name: "Instagram Hashtags",
-//     desc: "An AI tool that generate Instagram hashtags based on your post niche and outline information",
-//     category: "Instagram",
-//     icon: FaInstagram,
-//     aiPrompt:
-//       "Give me some good examples of instagram hashtags on given niche & outline topic and give me result in Rich Text Editor format",
-//     slug: "generate-instagram-hashtags",
-//     form: [
-//       {
-//         label: "Enter your post niche",
-//         field: "input",
-//         name: "niche",
-//         required: true,
-//       },
-//       {
-//         label: "Enter post outline",
-//         field: "textarea",
-//         name: "outline",
-//       },
-//     ],
-//   },
-//   {
-//     name: "Tiktok Hashtags",
-//     desc: "An AI tool that generate Tiktok topic idea based on your post niche and outline information",
-//     category: "Tiktok",
-//     icon: FaTiktok,
-//     aiPrompt:
-//       "Give me some good examples of instagram hashtags on given niche & outline topic and give me result in Rich Text Editor format",
-//     slug: "generate-tiktok-hashtags",
-//     form: [
-//       {
-//         label: "Enter your post niche",
-//         field: "input",
-//         name: "niche",
-//         required: true,
-//       },
-//       {
-//         label: "Enter post outline",
-//         field: "textarea",
-//         name: "outline",
-//       },
-//     ],
-//   },
-//   {
-//     name: "Linkedin Post",
-//     desc: "An AI tool that generate Linkedin Post idea based on your post niche and outline information",
-//     category: "Linkedin",
-//     icon: FaLinkedin,
-//     aiPrompt:
-//       "Give me some good examples of Linkedin Post idea on given niche & outline topic and give me result in Rich Text Editor format",
-//     slug: "generate-likedin-post",
-//     form: [
-//       {
-//         label: "Enter your post niche",
-//         field: "input",
-//         name: "niche",
-//         required: true,
-//       },
-//       {
-//         label: "Enter post outline",
-//         field: "textarea",
-//         name: "outline",
-//       },
-//     ],
-//   },
-//   {
-//     name: "Tweet",
-//     desc: "An AI tool that generate Linkedin Post idea based on your post niche and outline information",
-//     category: "Tweet",
-//     icon: FaTwitter,
-//     aiPrompt:
-//       "Give me 280 characters of tweet example on given niche & outline topic",
-//     slug: "generate-tweet-post",
-//     form: [
-//       {
-//         label: "Enter your tweet niche",
-//         field: "input",
-//         name: "niche",
-//         required: true,
-//       },
-//       {
-//         label: "Enter tweet outline",
-//         field: "textarea",
-//         name: "outline",
-//       },
-//     ],
-//   },
-// ];
-import { icons } from "lucide-react";
+import { 
+  FileText, 
+  Youtube, 
+  Edit3, 
+  Smile, 
+  Instagram, 
+  Linkedin, 
+  Search, 
+  Home, 
+  ShoppingCart, 
+  Mail, 
+  MapPin,
+  BarChart3,
+  Lightbulb
+} from "lucide-react";
 
 export const contentTemplates = [
-  // Blog Tools
+  // Enhanced Blog Tools
+  {
+    name: 'SEO-Optimized Blog Post',
+    desc: 'Create comprehensive blog posts with built-in SEO analysis and optimization',
+    category: 'Blog',
+    icon: FileText,
+    aiPrompt: 'Generate a complete SEO-optimized blog post with the following structure: engaging introduction, properly structured headings, keyword integration, internal linking suggestions, and compelling conclusion. Include meta description and focus keyword. Return in rich text format with SEO score indicators.',
+    slug: 'seo-blog-post',
+    form: [
+      {
+        label: 'Primary Topic/Keyword',
+        field: 'input',
+        name: 'keyword',
+        required: true,
+        placeholder: 'e.g., content marketing strategies'
+      },
+      {
+        label: 'Target Audience',
+        field: 'select',
+        name: 'audience',
+        options: ['General', 'B2B', 'B2C', 'Technical', 'Beginners', 'Experts'],
+        required: true
+      },
+    ]
+  },
+  
+  // Industry-Specific Templates
+  {
+    name: 'Real Estate Property Description',
+    desc: 'Create compelling property descriptions that highlight features and attract buyers',
+    category: 'Industry Specific',
+    icon: Home,
+    aiPrompt: 'Generate an engaging real estate property description that emphasizes key features, creates emotional appeal, and includes persuasive language for potential buyers. Include amenities, neighborhood benefits, and a call-to-action.',
+    slug: 'real-estate-description',
+    form: [
+      {
+        label: 'Property Type',
+        field: 'select',
+        name: 'propertyType',
+        options: ['Single Family Home', 'Apartment/Condo', 'Commercial', 'Land', 'Luxury Home'],
+        required: true
+      },
+      {
+        label: 'Key Features',
+        field: 'textarea',
+        name: 'features',
+        required: true,
+        placeholder: 'e.g., 3 bedrooms, renovated kitchen, waterfront, etc.'
+      },
+    ]
+  },
+  
+  // Multi-Platform Content
+  {
+    name: 'Content Repurposing Suite',
+    desc: 'Transform long-form content into multiple platform-specific formats',
+    category: 'Multi-Platform',
+    icon: BarChart3,
+    aiPrompt: 'Take the provided long-form content and create: 1) A Twitter thread outline with 5-7 tweets, 2) A LinkedIn article summary, 3) 3 Instagram captions of varying lengths, 4) 5 bullet points for a newsletter, and 5) A short video script concept. Format each section clearly.',
+    slug: 'content-repurposing',
+    form: [
+      {
+        label: 'Paste Your Long-Form Content',
+        field: 'textarea',
+        name: 'content',
+        required: true
+      },
+      {
+        label: 'Primary Platforms',
+        field: 'checkbox',
+        name: 'platforms',
+        options: ['Twitter', 'LinkedIn', 'Instagram', 'Facebook', 'YouTube', 'Newsletter'],
+        required: true
+      }
+    ]
+  },
+  
+  // E-commerce Templates
+  {
+    name: 'Product Description Generator',
+    desc: 'Create persuasive product descriptions that convert visitors to buyers',
+    category: 'E-commerce',
+    icon: ShoppingCart,
+    aiPrompt: 'Generate a compelling product description that highlights benefits (not just features), addresses customer pain points, includes persuasive language, and incorporates SEO best practices. Structure with scannable sections and include a compelling call-to-action.',
+    slug: 'product-description',
+    form: [
+      {
+        label: 'Product Name',
+        field: 'input',
+        name: 'productName',
+        required: true
+      },
+      {
+        label: 'Key Features/Benefits',
+        field: 'textarea',
+        name: 'features',
+        required: true,
+        placeholder: 'List the main features and how they benefit the customer'
+      },
+    ]
+  },
+  
+  // Advanced SEO Tools
+  {
+    name: 'Keyword Cluster Content',
+    desc: 'Create comprehensive content covering a cluster of related keywords',
+    category: 'SEO Tools',
+    icon: Search,
+    aiPrompt: 'Generate a comprehensive article that naturally incorporates the following primary keyword and related secondary keywords. Structure content to cover all aspects of the topic while maintaining natural keyword density and reader engagement.',
+    slug: 'keyword-cluster-content',
+    form: [
+      {
+        label: 'Primary Keyword',
+        field: 'input',
+        name: 'primaryKeyword',
+        required: true
+      },
+      {
+        label: 'Content Depth',
+        field: 'select',
+        name: 'depth',
+        options: ['Basic Overview', 'Comprehensive Guide', 'Expert Deep Dive']
+      }
+    ]
+  },
+  
+  // Email Marketing Templates
+  {
+    name: 'Email Sequence Generator',
+    desc: 'Create a complete email marketing sequence for onboarding or nurturing',
+    category: 'Email Marketing',
+    icon: Mail,
+    aiPrompt: 'Generate a complete email sequence including: 1) Welcome email, 2) Educational content email, 3) Value proposition email, 4) Social proof email, and 5) Call-to-action email. Ensure consistent tone and gradual building of relationship.',
+    slug: 'email-sequence',
+    form: [
+      {
+        label: 'Sequence Purpose',
+        field: 'select',
+        name: 'purpose',
+        options: ['Welcome Series', 'Product Onboarding', 'Lead Nurturing', 'Re-engagement', 'Sales Sequence'],
+        required: true
+      },
+      {
+        label: 'Target Audience',
+        field: 'input',
+        name: 'audience',
+        placeholder: 'Describe who will receive these emails'
+      },
+      {
+        label: 'Key Messages',
+        field: 'textarea',
+        name: 'messages',
+        placeholder: 'What are the main points you want to communicate?'
+      }
+    ]
+  },
+  
+  // Local Business Templates
+  {
+    name: 'Local SEO Content Pack',
+    desc: 'Generate localized content for better Google Business Profile visibility',
+    category: 'Local SEO',
+    icon: MapPin,
+    aiPrompt: 'Create localized content including: 1) Business description optimized for local SEO, 2) Three Google Posts variations, 3) Response templates for common reviews, and 4) FAQ section addressing local customer concerns. Incorporate location-specific keywords naturally.',
+    slug: 'local-seo-content',
+    form: [
+      {
+        label: 'Business Type',
+        field: 'input',
+        name: 'businessType',
+        required: true,
+        placeholder: 'e.g., Italian restaurant, dental clinic, hair salon'
+      },
+      {
+        label: 'Location/City',
+        field: 'input',
+        name: 'location',
+        required: true
+      },
+    ]
+  },
+  
+  // Original templates updated with Lucide icons
   {
     name: 'Blog Title',
     desc: 'Generate compelling blog titles based on your niche and outline.',
     category: 'Blog',
-    icon: '/blog.png',
+    icon: FileText,
     aiPrompt: 'Give me 5 blog topic ideas in bullet points based on the given niche and outline. Return the output in rich text editor format.',
     slug: 'generate-blog-title',
     form: [
@@ -166,31 +220,10 @@ export const contentTemplates = [
     ]
   },
   {
-    name: 'Blog Content',
-    desc: 'Generate complete blog content tailored to your niche and structure.',
-    category: 'Blog',
-    icon: '/content.png',
-    aiPrompt: 'Generate blog content based on the given niche and outline. Return the output in rich text editor format.',
-    slug: 'blog-content-generator',
-    form: [
-      {
-        label: 'Enter your blog topic',
-        field: 'input',
-        name: 'niche',
-        required: true,
-      },
-      {
-        label: 'Enter blog outline',
-        field: 'textarea',
-        name: 'outline',
-      }
-    ]
-  },
-  {
     name: 'Blog Topic Ideas',
     desc: 'Instantly generate trending blog topic ideas based on your niche.',
     category: 'Blog',
-    icon: '/idea.png',
+    icon: Lightbulb,
     aiPrompt: 'Generate top 5 blog topic ideas in bullet point format based on the provided niche and outline. Return the output in rich text editor format.',
     slug: 'blog-topic-idea',
     form: [
@@ -207,13 +240,11 @@ export const contentTemplates = [
       }
     ]
   },
-
-  // YouTube Tools
   {
     name: 'YouTube SEO Title',
     desc: 'Generate 5 high-ranking, SEO-optimized titles for YouTube videos.',
     category: 'YouTube Tools',
-    icon: '/web.png',
+    icon: Youtube,
     aiPrompt: 'Generate the best SEO-optimized YouTube video titles (5 variations) based on the provided keyword and outline. Return the output in rich text editor format.',
     slug: 'youtube-seo-title',
     form: [
@@ -231,54 +262,10 @@ export const contentTemplates = [
     ]
   },
   {
-    name: 'YouTube Description',
-    desc: 'Create engaging YouTube video descriptions with emojis in under 5 lines.',
-    category: 'YouTube Tools',
-    icon: '/yt-description.png',
-    aiPrompt: 'Generate a concise YouTube description (under 4–5 lines) using emojis, based on the given topic and outline. Return the output in rich text editor format.',
-    slug: 'youtube-description',
-    form: [
-      {
-        label: 'Enter your YouTube topic/title',
-        field: 'input',
-        name: 'topic',
-        required: true,
-      },
-      {
-        label: 'Enter YouTube outline',
-        field: 'textarea',
-        name: 'outline',
-      }
-    ]
-  },
-  {
-    name: 'YouTube Tags',
-    desc: 'Generate 10 keyword-rich tags for your YouTube video content.',
-    category: 'YouTube Tools',
-    icon: '/yt-tags.png',
-    aiPrompt: 'Generate 10 optimized YouTube tags in bullet point format based on the given title and outline.',
-    slug: 'youtube-tags',
-    form: [
-      {
-        label: 'Enter your YouTube video title',
-        field: 'input',
-        name: 'title',
-        required: true,
-      },
-      {
-        label: 'Enter video outline (optional)',
-        field: 'textarea',
-        name: 'outline',
-      }
-    ]
-  },
-
-  // New Tools
-  {
     name: 'Rewrite Article (Plagiarism-Free)',
     desc: 'Rewrite any text to be unique and plagiarism-free with improved readability.',
     category: 'Writing Tools',
-    icon: '/plagiarism.png',
+    icon: Edit3,
     aiPrompt: 'Rewrite the given article to make it 100% plagiarism-free while preserving its core meaning. Return the output in rich text editor format.',
     slug: 'rewrite-article',
     form: [
@@ -291,26 +278,10 @@ export const contentTemplates = [
     ]
   },
   {
-    name: 'Text Improver',
-    desc: 'Improve the tone, grammar, and style of any written content.',
-    category: 'Writing Tools',
-    icon: '/text.png',
-    aiPrompt: 'Improve the grammar, flow, and professionalism of the following text. Return the output in rich text editor format.',
-    slug: 'text-improver',
-    form: [
-      {
-        label: 'Paste your text here',
-        field: 'textarea',
-        name: 'text',
-        required: true,
-      }
-    ]
-  },
-  {
     name: 'Add Emojis to Text',
     desc: 'Make your message pop by auto-adding relevant emojis to any text.',
     category: 'Fun Tools',
-    icon: '/emoji.png',
+    icon: Smile,
     aiPrompt: 'Add appropriate emojis to the following text to make it more engaging, keeping the original context. Return in rich text format.',
     slug: 'emoji-text-generator',
     form: [
@@ -326,7 +297,7 @@ export const contentTemplates = [
     name: 'Instagram Post Generator',
     desc: 'Generate aesthetic Instagram captions with hashtags and emoji support.',
     category: 'Social Media Tools',
-    icon: '/instagram.png',
+    icon: Instagram,
     aiPrompt: 'Create a short, engaging Instagram post based on the given content idea, with hashtags and emojis. Return in rich text format.',
     slug: 'instagram-post-generator',
     form: [
@@ -342,7 +313,7 @@ export const contentTemplates = [
     name: 'LinkedIn Caption Generator',
     desc: 'Craft a professional and engaging caption tailored for LinkedIn.',
     category: 'Social Media Tools',
-    icon: '/linkedin.png',
+    icon: Linkedin,
     aiPrompt: 'Generate a professional LinkedIn post caption based on the given message or topic. Maintain a formal tone and avoid informal emojis. Return in rich text format.',
     slug: 'linkedin-caption-generator',
     form: [
@@ -355,4 +326,3 @@ export const contentTemplates = [
     ]
   }
 ];
-

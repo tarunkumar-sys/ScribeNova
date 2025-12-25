@@ -9,6 +9,7 @@ const DashboardLayout = ({
     <div className="bg-slate-100 h-screen">
       <div className="md:w-64 hidden md:block fixed">
         <Sidebar />
+        // Add AI Usage component here
         <AIUsage />
       </div>
       <div className="md:ml-64 h-fit pb-5">{children}</div>

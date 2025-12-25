@@ -18,8 +18,9 @@ out/
 coverage/
 
 # Environment files
-# .env
-# .env.*
+.env
+.env.local
+.env.*
 
 # IDE files
 .idea/

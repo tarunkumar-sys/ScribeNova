@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React from "react";
 
 const HeroSection = () => {
@@ -29,17 +29,18 @@ const HeroSection = () => {
         NTENT
       </h1>
       <h1 className="text-[8.5vw] uppercase font-black leading-[8.5vw] text-center">
-      Forge SPACE
+        Forge SPACE
       </h1>
       <p className="text-center font-normal mt-[3vh] text-[1vw]">
-        Effortlessly Generate High-Quality Content with AI in Minutes —creating everything
+        Effortlessly Generate High-Quality Content with AI in Minutes —creating
+        everything
         <br />
         to D and beyond with our expertise in
       </p>
 
       <div className="flex items-center justify-center flex-wrap gap-2 mt-4">
         <h4 className="font-normal text-[1vw] lowercase px-[18px] py-[9px] border border-gray-400 rounded-full">
-         Content Creation
+          Content Creation
         </h4>
         <h4 className="font-normal text-[1vw] lowercase px-[18px] py-[9px] border border-gray-400 rounded-full">
           User Experience
